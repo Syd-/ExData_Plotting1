@@ -1,5 +1,6 @@
 # plot1.R
 # Syd-
+# Ensure "household_power_consumption.txt" exists in the directory before calling this program!
 # -------------------------------------------------------------
 # Load the data
 allData <- read.csv("household_power_consumption.txt", sep=";", header = TRUE, colClasses = c(rep("character", 9)))
