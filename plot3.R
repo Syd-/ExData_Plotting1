@@ -21,7 +21,7 @@ plot(data$Sub_metering_1~data$DateTime, type="l", xlab="", ylab="Energy sub mete
 lines(data$Sub_metering_2~data$DateTime, col="red")
 lines(data$Sub_metering_3~data$DateTime, col="blue")
 # Add the legend
-legend("topright", col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1)
+legend("topright", col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1,  cex=0.5)
 # Copy the line graph to a png file (with correct dimensions)
 dev.copy(png, file="plot3.png", height=480, width=480)
 # Turn off dev
