@@ -21,18 +21,18 @@ data$DateTime <- as.POSIXct(paste(data$Date, data$Time))
 # Create the parameters for the various plots
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 # Plot 1: Global active power
-plot(data$Global_active_power~data$DateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+plot(data$Global_active_power~data$DateTime, type="l", ylab="Global Active Power", xlab="")
 # Plot 2: Voltage
-plot(data$Voltage~data$DateTime, type="l", ylab="Voltage (volts)", xlab="")
+plot(data$Voltage~data$DateTime, type="l", ylab="Voltage", xlab="datetime")
 # Plot 3: Submeters
-plot(data$Sub_metering_1~data$DateTime, type="l", xlab="datetime", ylab="Energy sub metering", col="black")
+plot(data$Sub_metering_1~data$DateTime, type="l", xlab="", ylab="Energy sub metering", col="black")
 # Add more lines to plot!
 lines(data$Sub_metering_2~data$DateTime, col="red")
 lines(data$Sub_metering_3~data$DateTime, col="blue")
 # Add the legend
-legend("topright", col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, cex=0.5)
+legend("topright", col=c("black", "red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, cex=0.6, bty="n")
 # Plot 4: Global reactive power
-plot(data$Global_reactive_power~data$DateTime, type="l", ylab="Global Reactive Power (kilowatts)", xlab="datetime")
+plot(data$Global_reactive_power~data$DateTime, type="l", ylab="Global_reactive_power", xlab="datetime")
 # Copy the line graph to a png file (with correct dimensions)
 dev.copy(png, file="plot4.png", height=480, width=480)
 # Turn off dev
